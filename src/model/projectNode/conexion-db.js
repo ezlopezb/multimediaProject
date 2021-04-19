@@ -1,11 +1,11 @@
 class conexiondb{
-constructor(){
+constructor(database){
 var mysql = require('mysql');
 this.con = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "root",
-  database: "sistema"
+  database: database
 });
 //con.connect(function(err) {
   //if (err) throw err;

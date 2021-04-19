@@ -7,7 +7,7 @@ http.createServer(function (req, res) {
 //DESCOMENTAR EL SIGUIENTE CODIGO PARA CONSULTAR LA BASE DE DATOS
 
 /*var conexiondb = require('./conexion-db')
-const condb=new conexiondb();
+const condb=new conexiondb("sistema");
 condb.getcon().connect(function(err) {
   condb.getcon().query("SELECT * FROM track", function (err, result, fields) {
     console.log(result);
