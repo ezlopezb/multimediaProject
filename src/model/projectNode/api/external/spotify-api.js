@@ -1,3 +1,6 @@
+const conexiondb = require('../../mysql/conexion-mysql');
+const conexiondbRoute = require('../require');
+
 class spotifyReq{
     constructor(option,clientid,clientsecret){
     this.https = require('https');
@@ -43,7 +46,14 @@ getAlbumTracks(albumid){
       };
       request.get(options, function(error, response, body) {
         console.log(`statusCode: ${response.statusCode}`)
-        console.log(body)
+        //console.log(body)
+        var conect=require('../require')
+        var conectio= new conexiondbRoute()
+        conectio.getNode().getcon().query('select * from track',function (err, result, fields) {
+          if (err) throw err;
+          console.log(result);
+        })
+
     })}
 })
 }
