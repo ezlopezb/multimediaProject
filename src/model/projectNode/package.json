@@ -1,11 +1,11 @@
 {
-  "name": "projectnode",
-  "version": "1.0.0",
-  "description": "yiya",
-  "main": "multimediaSys.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf public && mkdir public && echo 'Custom Build' > ./public/index.html"
   },
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.5",
+    "request": "^2.88.2"
+  }
 }
